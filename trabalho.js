@@ -1,22 +1,16 @@
 // Teste 1: geradorDeTagsDeIdentificação
 
-const tagDeIdentificacao = 'Pantera';
-
 function geradorDeTagsDeIdentificacao(nome) {
   return nome.toUpperCase();
 }
 
 // Teste 2: verificarSePodeSerAdotado
 
-const idade = 1;
-const porte = 'M';
-
 function verificarSePodeSerAdotado(idade, porte) {
-  const adocao = idade == 1 || porte === 'M';
+  const adocao = idade == 1 && porte === 'M';
 
   return adocao;
 }
-
 
 //Teste 3: calcularConsumoDeRacao
 
@@ -40,7 +34,7 @@ function decidirTipoDeAtividadePorPorte(porteInformado) {
       atividade = `correr no parque`;
       break;
     default:
-      atividade = `porte inválido`
+      atividade = `porte inválido`;
   }
 
   return atividade;
@@ -57,5 +51,5 @@ export {
   verificarSePodeSerAdotado,
   calcularConsumoDeRacao,
   decidirTipoDeAtividadePorPorte,
-  buscarDadoAsync
-}
+  buscarDadoAsync,
+};
